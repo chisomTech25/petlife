@@ -1,0 +1,209 @@
+/* --- Auth Pages Layout --- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--bg-light) 100%);
+  padding: 20px;
+}
+
+.auth-container {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.auth-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.auth-page h1, .auth-page h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* --- Auth Buttons --- */
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-auth {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-auth.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-auth.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-auth.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-auth.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-auth.btn-guest {
+  background: transparent;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.btn-auth.btn-guest:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* --- Auth Forms --- */
+.auth-form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.auth-form .form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.auth-form .form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.auth-form .form-group input:focus {
+  border-color: var(--primary);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* --- Auth Footer Links --- */
+.auth-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.auth-footer a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.btn-guest-link {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: color 0.3s;
+}
+
+.btn-guest-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 30px 20px;
+  }
+  .auth-page h1, .auth-page h2 {
+    font-size: 24px;
+  }
+}
+/* --- Password Toggle Styles --- */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 45px; /* Make room for the toggle button */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.password-toggle:hover {
+  transform: scale(1.15);
+}
+
+.password-toggle:active {
+  transform: scale(0.95);
+}
